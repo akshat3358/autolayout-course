@@ -41,6 +41,7 @@
 		71B6D5D0230C3A5400F54F57 /* AdjustSpacersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B6D5CF230C3A5400F54F57 /* AdjustSpacersView.swift */; };
 		71B6D5D2230C3B1100F54F57 /* AdjustSpacersBlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B6D5D1230C3B1100F54F57 /* AdjustSpacersBlueView.swift */; };
 		71D6E01122F9C6BF00400984 /* SimpleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D6E01022F9C6BF00400984 /* SimpleStackView.swift */; };
+		776867342F88D8CA000E8668 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776867332F88D8C3000E8668 /* PaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		71B6D5CF230C3A5400F54F57 /* AdjustSpacersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustSpacersView.swift; sourceTree = "<group>"; };
 		71B6D5D1230C3B1100F54F57 /* AdjustSpacersBlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustSpacersBlueView.swift; sourceTree = "<group>"; };
 		71D6E01022F9C6BF00400984 /* SimpleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStackView.swift; sourceTree = "<group>"; };
+		776867332F88D8C3000E8668 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		7131724622F9BF4700575BBF /* 1-Examples */ = {
 			isa = PBXGroup;
 			children = (
+				776867312F88D8AB000E8668 /* UIComponents */,
 				7131725922F9BF6C00575BBF /* Files */,
 				7131725A22F9BF9300575BBF /* Anchors */,
 				7131726B22F9C3FA00575BBF /* IntrinsicContentSize */,
@@ -221,6 +224,22 @@
 				712F3A9222FDD99800345A0C /* StackSpacerView.swift */,
 			);
 			name = StackViews;
+			sourceTree = "<group>";
+		};
+		776867312F88D8AB000E8668 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				776867322F88D8B9000E8668 /* Label */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		776867322F88D8B9000E8668 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				776867332F88D8C3000E8668 /* PaddingLabel.swift */,
+			);
+			path = Label;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +333,7 @@
 				71D6E01122F9C6BF00400984 /* SimpleStackView.swift in Sources */,
 				7135C255230EDBED00F34786 /* Visibility.swift in Sources */,
 				7131726F22F9C45900575BBF /* CHCRForm.swift in Sources */,
+				776867342F88D8CA000E8668 /* PaddingLabel.swift in Sources */,
 				710EB6BE2302FECE00404F03 /* RedView.swift in Sources */,
 				7131726822F9C0C600575BBF /* ReadableContentGuides.swift in Sources */,
 				712F3AA222FE030300345A0C /* CHCRFill.swift in Sources */,

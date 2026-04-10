@@ -21,6 +21,22 @@ func makeLabel(withText text: String) -> UILabel {
     return label
 }
 
+func makePaddingLabel(withText text: String) -> UILabel {
+    let paddingLabel = PaddingLabel()
+    paddingLabel.translatesAutoresizingMaskIntoConstraints = false
+    paddingLabel.text = text
+    paddingLabel.contentInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+    paddingLabel.backgroundColor = .green
+    paddingLabel.layer.cornerRadius = 8
+    paddingLabel.layer.masksToBounds = true
+    
+    return paddingLabel
+}
+func makePaddingLabel(withText text: String, size: CGFloat) -> UILabel {
+    let paddingLabel = makePaddingLabel(withText: text)
+    paddingLabel.font = UIFont.systemFont(ofSize: size)
+    return paddingLabel
+}
 func makeLabel(withText text: String, size: CGFloat) -> UILabel {
     let label = makeLabel(withText: text)
     label.font = UIFont.systemFont(ofSize: size)
@@ -158,3 +174,4 @@ extension UIColor {
     static let darkTeal = UIColor(red: 90/255, green: 200/255, blue: 250/255, alpha: 1)
     static let darkYellow = UIColor(red: 255/255, green: 204/255, blue: 0/255, alpha: 1)
 }
+
