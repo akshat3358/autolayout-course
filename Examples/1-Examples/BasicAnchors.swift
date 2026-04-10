@@ -5,6 +5,13 @@
 //  Created by Jonathan Rasmusson Work Pro on 2019-07-13.
 //  Copyright © 2019 Rasmusson Software Consulting. All rights reserved.
 //
+/*
+🧠 Key Concept (important)
+ 
+Positive constant (+8) → moves view inside from top/leading
+Negative constant (-8) → moves view inside from bottom/trailing
+ 
+*/
 
 import UIKit
 
@@ -20,24 +27,35 @@ class BasicAnchors: UIViewController {
         navigationItem.title = "Basic Anchors"
 
         let upperLeftLabel = makeLabel(withText: "upperLeft")
+        let largeUpperLeftLabel = makeLabel(withText: "upperLeft",size: 32)
         let upperRightLabel = makeLabel(withText: "upperRight")
         let lowerLeftLabel = makeSecondaryLabel(withText: "lowerLeft")
         let button = makeButton(withText: "Pay Bill")
         let redView = makeView()
 
         view.addSubview(upperLeftLabel)
+        view.addSubview(largeUpperLeftLabel)
         view.addSubview(upperRightLabel)
         view.addSubview(lowerLeftLabel)
         view.addSubview(button)
         view.addSubview(redView)
 
-        upperLeftLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8).isActive = true
-        upperLeftLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
+        upperLeftLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8).isActive = true //upperleftTop = view.safeAreaLayoutGuide.topAnchor + 8
+        upperLeftLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true // upperleftLeading = view.leadingAnchor + 8
 
+//        largeUpperLeftLabel.topAnchor.constraint(equalTo: upperLeftLabel.topAnchor).isActive = true
+//        largeUpperLeftLabel.centerYAnchor.constraint(equalTo: upperLeftLabel.centerYAnchor).isActive = true
+        
+            // baseline anchors
+        largeUpperLeftLabel.firstBaselineAnchor.constraint(equalTo: upperLeftLabel.firstBaselineAnchor).isActive = true
+        
+        largeUpperLeftLabel.leadingAnchor.constraint(equalTo: upperLeftLabel.trailingAnchor, constant: 8).isActive = true
+        
         upperRightLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8).isActive = true
-        upperRightLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
+        upperRightLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true //upperRightTrailing  = view.trailingAnchor - 8
 
         lowerLeftLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8).isActive = true
+        //lowerLeftBottom  = view.safeAreaLayoutGuide.bottomAnchor - 8
         lowerLeftLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
 
         button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8).isActive = true
