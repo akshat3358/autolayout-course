@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Lab(name: "Safe Area Guide", viewController: SafeAreaGuide()),
             Lab(name: "Layout Margins", viewController: LayoutMargin()),
             Lab(name: "Spacer Views", viewController: SpacerViews()),
-            Lab(name: "Readable Content Guide", viewController: ReadableContentGuide())
+            Lab(name: "Readable Content Guide", viewController: ReadableContentGuide()),
+            Lab(name: "Layout Margins as spacer Guide", viewController: MarginGuides())
         ]
         
         let intrinsicLabs = [
